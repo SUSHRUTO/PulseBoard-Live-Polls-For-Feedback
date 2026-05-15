@@ -46,7 +46,6 @@ async function main() {
     allowedHeaders: ["Content-Type", "Authorization"]
     })
   );
-  app.options("*", cors());
   app.use(morgan(env.isProduction ? "combined" : "dev"));
   app.use(express.json({ limit: "1mb" }));
   app.use(cookieParser());
