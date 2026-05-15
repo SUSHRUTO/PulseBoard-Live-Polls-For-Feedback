@@ -151,3 +151,18 @@ Set `NODE_ENV=production`, `CLIENT_URL` to the deployed frontend/backend origin,
 - Redis is supported for rate limiting.
 - Socket.io powers live analytics updates.
 - Public poll links, expiry, anonymous/authenticated response modes, mandatory validation, analytics, and publishing are implemented.
+
+
+## Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Poll Creation
+![Poll](screenshots/polls.png)
+
+### Review
+![Poll](screenshots/preview.png)
