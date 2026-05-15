@@ -164,5 +164,5 @@ Set `NODE_ENV=production`, `CLIENT_URL` to the deployed frontend/backend origin,
 ### Poll Creation
 ![Poll](screenshots/polls.png)
 
-### Review
+### Preview
 ![Poll](screenshots/preview.png)
