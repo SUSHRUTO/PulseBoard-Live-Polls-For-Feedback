@@ -40,10 +40,13 @@ async function main() {
   );
   app.use(
     cors({
-      origin: env.clientUrl,
-      credentials: true
+    origin: [env.clientUrl],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
     })
   );
+  app.options("*", cors());
   app.use(morgan(env.isProduction ? "combined" : "dev"));
   app.use(express.json({ limit: "1mb" }));
   app.use(cookieParser());
