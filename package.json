@@ -1,0 +1,51 @@
+{
+  "name": "pollpulse-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Full-stack real-time polling platform with email auth, optional OIDC, Redis rate limiting, Socket.io analytics, Express, Drizzle, and React.",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "client:dev": "vite --host 0.0.0.0 --port 5173",
+    "server:dev": "nodemon server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "db:push": "node server/db/init.js",
+    "lint": "eslint .",
+    "preview": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "bcryptjs": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "date-fns": "latest",
+    "dotenv": "latest",
+    "drizzle-orm": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "lucide-react": "latest",
+    "morgan": "latest",
+    "openid-client": "5.7.1",
+    "pg": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "redis": "latest",
+    "socket.io": "latest",
+    "socket.io-client": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "concurrently": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "nodemon": "latest",
+    "vite": "latest"
+  }
+}
