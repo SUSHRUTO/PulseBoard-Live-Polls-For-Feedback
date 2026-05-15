@@ -21,7 +21,6 @@ async function main() {
   await initRedis();
 
   const app = express();
-  app.set("trust proxy", 1);
   const server = http.createServer(app);
   const io = new Server(server, {
     cors: {
@@ -40,10 +39,8 @@ async function main() {
   );
   app.use(
     cors({
-    origin: [env.clientUrl],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+      origin: env.clientUrl,
+      credentials: true
     })
   );
   app.use(morgan(env.isProduction ? "combined" : "dev"));
